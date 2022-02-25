@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import './App.css';
 import {apiKey} from "./config";
-import Icon from './components/Icon';
 import {Search} from "react-bootstrap-icons";
 import Weather from "./components/Weather";
+import Container from "./components/Container";
 
 function App() {
 
     const [weatherData, setWeatherData] = useState([{}])
-    const [city, setCity] = useState("")
+    const [city, setCity] = useState("dubai")
 
     const getWeather = () => {
 
@@ -21,15 +21,12 @@ function App() {
         )
     }
 
+    // https://openweathermap.org/weather-conditions
+
   return (
-    <div className="
-                    w-full h-screen
-                    bg-gray-700
-                    flex items-center justify-center flex-col
-                   ">
+    <Container weatherData={weatherData}>
         <div className="
                         w-full h-screen
-
                        ">
 
             <header className="
@@ -81,9 +78,7 @@ function App() {
 
         </div>
 
-
-
-    </div>
+    </Container>
   )
 };
 

@@ -16,7 +16,7 @@ export default function Weather({ weatherData }) {
             ): (
                 <>
                     <div className="
-                                w-full h-1/4
+                                w-full h-2/5
                                 flex flex-col items-center justify-center
                                 space-y-3
                                ">
