@@ -8,7 +8,7 @@ import Container from "./components/Container";
 function App() {
 
     const [weatherData, setWeatherData] = useState([{}])
-    const [city, setCity] = useState("dubai")
+    const [city, setCity] = useState()
 
     const getWeather = () => {
 

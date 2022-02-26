@@ -7,7 +7,7 @@ export default function Container(props) {
     if (condition.weather === undefined) {
         console.log("undefined!")
     } else {
-        console.log(condition.weather[0].main)
+        condition = condition.weather[0].main
     }
 
 
@@ -25,10 +25,10 @@ export default function Container(props) {
         gradient = 'bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900'
     }
     else if (condition === 'Snow') {
-        gradient = 'bg-gradient-to-r from-rose-100 to-teal-100'
+        gradient = 'bg-gradient-to-r from-red-100 to-indigo-100'
     }
     else if (condition === 'Clear') {
-        gradient = 'bg-gradient-to-b from-sky-400 to-sky-200'
+        gradient = 'bg-gradient-to-b from-blue-400 to-blue-200'
     }
     else if (condition === 'Clouds') {
         gradient = 'bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r'
